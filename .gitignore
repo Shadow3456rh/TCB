@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+backend/venv/
+
+# Build
+frontend/dist/
+
+# Environment
+.env
+.env.local
+backend/.env
+frontend/.env
+
+# Firebase credentials (NEVER commit)
+firebase-credentials.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads
+backend/uploads/
+
+# Misc
+*.log

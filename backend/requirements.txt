@@ -1,0 +1,18 @@
+# FastAPI & Server
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+
+# Firebase
+firebase-admin==6.6.0
+
+# AI
+ollama==0.4.7
+
+# PDF Processing
+PyPDF2==3.0.1
+
+# Utilities
+python-dotenv==1.0.1
