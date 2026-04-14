@@ -163,3 +163,9 @@ class ConceptExplainResponse(BaseModel):
     concept: str
     explanation: str
     detailLevel: str = "medium"
+
+
+class StudentAskResponse(BaseModel):
+    question: str
+    answer: str
+    source: str = "uploaded_material"

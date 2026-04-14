@@ -63,7 +63,7 @@ async def health():
 
 
 # Register routes
-from app.routes import auth, courses, lessons, quizzes, ai, analytics
+from app.routes import auth, courses, lessons, quizzes, ai, analytics, question_banks
 
 app.include_router(auth.router, prefix="/api/auth", tags=["Auth"])
 app.include_router(courses.router, prefix="/api/courses", tags=["Courses"])
@@ -71,4 +71,5 @@ app.include_router(lessons.router, prefix="/api/lessons", tags=["Lessons"])
 app.include_router(quizzes.router, prefix="/api/quizzes", tags=["Quizzes"])
 app.include_router(ai.router, prefix="/api/ai", tags=["AI"])
 app.include_router(analytics.router, prefix="/api/analytics", tags=["Analytics"])
+app.include_router(question_banks.router, prefix="/api/question-banks", tags=["Question Banks"])
 

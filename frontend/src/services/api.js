@@ -81,11 +81,28 @@ export const aiAPI = {
   explainAnswer: (data) => api.post('/api/ai/explain-answer', data),
   explainConcept: (data) => api.post('/api/ai/explain-concept', data),
   generatePractice: () => api.post('/api/ai/generate-practice'),
+  uploadPdfQuestions: (formData) => api.post('/api/ai/upload-pdf-questions', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+    timeout: 180000,
+  }),
+  uploadPdfAsk: (formData) => api.post('/api/ai/upload-pdf-ask', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+    timeout: 180000,
+  }),
 };
 
 // ---- Analytics ----
 export const analyticsAPI = {
   course: (courseId) => api.get(`/api/analytics/course/${courseId}`),
+};
+
+// ---- Question Banks ----
+export const questionBanksAPI = {
+  create: (data) => api.post('/api/question-banks/', data),
+  list: (courseId) => api.get('/api/question-banks/', { params: { courseId } }),
+  get: (id) => api.get(`/api/question-banks/${id}`),
+  togglePublish: (id) => api.put(`/api/question-banks/${id}/publish`),
+  delete: (id) => api.delete(`/api/question-banks/${id}`),
 };
 
 export default api;
